@@ -30,6 +30,8 @@ Current analysis focuses on:
 - A single login action generates multiple Security events.
 - Event IDs vary based on logon type and system state.
 - Reliable detection should be based on event sequences and context rather than single events.
+- Windows does not log the entered password for failed authentication attempts.
+- Instead, Event ID 4625 provides metadata such as target account, logon type, and failure status, which is sufficient for detecting unauthorized access patterns.
 
 ## Next Steps
 - Install Sysmon for enhanced telemetry
